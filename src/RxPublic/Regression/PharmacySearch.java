@@ -17,6 +17,7 @@ public class PharmacySearch  {
 		WebDriver driver=new InternetExplorerDriver(cap);
 		
 		driver.get("https://crx.benefits.catamaranrx.com/rxpublic/portal/memberMain?customer=DEMO");
+		driver.manage().window().maximize();
 	}
 
 
