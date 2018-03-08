@@ -4,7 +4,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
+/*import org.openqa.selenium.ie.InternetExplorerDriver;*/
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 /*import org.testng.annotations.Test;*/
@@ -25,15 +25,17 @@ public class PharmacySearch  {
 		capabilities.setCapability("version", "11"); 
 		capabilities.setCapability("idleTimeout", 180);  
 		capabilities.setCapability("requireWindowFocus", true);
-		capabilities.setCapability("screenResolution" , "1280x800");
+		/*capabilities.setCapability("screenResolution" , "1280x800");*/
 		
 		WebDriver driver = new RemoteWebDriver(
 		new URL("http://"+System.getenv("SAUCE_USERNAME")+":"+System.getenv("SAUCE_ACCESS_KEY")+"@ondemand.saucelabs.com:80/wd/hub"),
 		capabilities);
 		
 		
-		driver.get("https://crx.benefits.catamaranrx.com/rxpublic/portal/memberMain?customer=DEMO");
+		driver.get("https://ctrx.benefits.catamaranrx.com/rxpublic/portal/memberMain?customer=CALPERS");
 		driver.manage().window().maximize();
+		
+		
 	}
 
 
